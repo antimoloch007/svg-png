@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SVG to PNG Converter</title>
+    <link rel="stylesheet" href="./css/main.css">
+    <link rel="icon" type="image/svg+xml" href="assets/favicon.svg">
+</head>
+<body>
+    <h1>SVG to PNG Converter</h1>
+    <div class="container">
+        <div id="drop-area" class="drop-area">
+            <p>Drag & drop SVG files here or click to select</p>
+            <input type="file" id="file-input" accept=".svg" class="hidden" multiple>
+        </div>
+        
+        <div class="settings">
+            <h3>Conversion Settings</h3>
+            <label>
+                Width (px):
+                <input type="number" id="width-input" placeholder="Auto">
+            </label>
+            <label>
+                Height (px):
+                <input type="number" id="height-input" placeholder="Auto">
+            </label>
+            <label>
+                Scale:
+                <input type="number" id="scale-input" value="1" min="0.1" max="10" step="0.1">
+            </label>
+            <label>
+                Background Color:
+                <input type="color" id="bg-color-input" value="#ffffff">
+                <input type="checkbox" id="transparent-bg"> Transparent
+            </label>
+        </div>
+        
+        <button id="convert-btn" disabled>Convert to PNG</button>
+        
+        <div id="results" class="results hidden">
+            <h3>Conversion Results</h3>
+            <div id="preview" class="preview"></div>
+        </div>
+    </div>
+
+    <!-- License Section -->
+    <footer class="license-section">
+        <div class="license-badge">
+            MIT License
+            <div class="license-tooltip">
+                MIT License<br><br>
+                Copyright (c) 2025 Austin Harshberger<br><br>
+                Permission is hereby granted, free of charge, to any person obtaining a copy
+                of this software and associated documentation files (the "Software"), to deal
+                in the Software without restriction, including without limitation the rights
+                to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
+                copies of the Software, and to permit persons to whom the Software is
+                furnished to do so, subject to the following conditions:<br><br>
+                The above copyright notice and this permission notice shall be included in all
+                copies or substantial portions of the Software.
+            </div>
+        </div>
+        <div class="author-info">
+            Created by Austin Harshberger
+        </div>
+    </footer>
+
+    <script src="./js/script.js"></script>
+</body>
+</html>
